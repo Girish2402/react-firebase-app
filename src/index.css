@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(/images/background.jpg) no-repeat;
+  background-size: cover;
 }
 
 code {
@@ -13,9 +15,14 @@ code {
 }
 
 .dashboard {
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .sign-in-container, .sign-up-container{
   padding-top: 50px;
+}
+
+form {
+  background-color: white;
+  padding: 0px 20px;
 }

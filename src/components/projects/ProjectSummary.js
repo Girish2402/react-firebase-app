@@ -1,12 +1,11 @@
 import React from 'react'
 
-const ProjectSummary = (props) => {
+const ProjectSummary = ({project}) => {
     return (
-        <div className="card grey darken-1">
+        <div className="card grey darken-1" key={project.id}>
             <div className="card-content white-text">
-                <span className="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
+                <span className="card-title">{project.title}</span>
+                <p>{project.context}</p>
             </div>
             <div className="card-action">
                 <a href="#">This is a link</a>

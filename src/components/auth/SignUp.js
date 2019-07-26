@@ -26,7 +26,7 @@ class SignUp extends Component {
       <div className="container sign-up-container">
 				<div className="row">
 					<div className="row">
-						<h4 className="grey-text darken-1">Sign Up</h4>
+						<h4 className="white-text darken-1">Sign Up</h4>
 					</div>
 					<form className="col s12" onSubmit={this.handleOnSubmit}>
 						<div className="row">

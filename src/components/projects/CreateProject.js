@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { createProject } from '../../store/actions/projectActions'
+import {connect} from 'react-redux'
 
 class CreateProject extends Component {
 
@@ -16,6 +18,8 @@ class CreateProject extends Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault();
+        debugger;
+        this.props.create_project(this.state)
         console.log(this.state);
     }
 
@@ -24,7 +28,7 @@ class CreateProject extends Component {
             <div className="container sign-up-container">
                 <div className="row">
                     <div className="row">
-                        <h4 className="grey-text darken-1">Create New Project</h4>
+                        <h4 className="white-text darken-1">Create New Project</h4>
                     </div>
                     <form className="col s12" onSubmit={this.handleOnSubmit}>
                         <div className="row">
@@ -35,7 +39,7 @@ class CreateProject extends Component {
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
-                                <textarea id="description" className="materialize-textarea"></textarea>
+                                <textarea id="description" className="materialize-textarea" onChange={this.handleOnChange}></textarea>
                                 <label htmlFor="description">Description</label>
                             </div>
                         </div>
@@ -51,4 +55,10 @@ class CreateProject extends Component {
     }
 }
 
-export default CreateProject
+const mapDispactedToProps = (dispached) => {
+    return {
+        create_project: (project) => dispached(createProject(project))
+    }
+}
+
+export default connect(null,mapDispactedToProps)(CreateProject)

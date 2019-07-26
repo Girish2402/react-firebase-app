@@ -37,7 +37,9 @@ class SignIn extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <button className="waves-effect waves-light btn pink">Login</button>
+                        <div className="input-field col s12">
+                            <button className="waves-effect waves-light btn pink">Sign Up</button>
+                        </div>
                     </div>
                 </form>
             </div>
