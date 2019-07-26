@@ -15,3 +15,7 @@ code {
 .dashboard {
   padding-top: 50px;
 }
+
+.sign-in-container, .sign-up-container{
+  padding-top: 50px;
+}
